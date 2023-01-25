@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoviesCell" rowHeight="219" id="KGk-i7-Jjw" customClass="MoviesCell" customModule="TaskAppGain" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCs-XT-x2Q" customClass="ShadowView" customModule="TaskAppGain" customModuleProvider="target">
+                        <rect key="frame" x="20" y="10" width="374" height="210"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.folder.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jbO-dq-v0O">
+                                <rect key="frame" x="0.0" y="1" width="150" height="207.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ZqU-Bo-GVN"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iAV-44-PHk">
+                                <rect key="frame" x="166" y="8" width="192" height="194"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08k-Jy-bOq">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="69"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLa" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKX-zr-mJk">
+                                        <rect key="frame" x="0.0" y="77" width="192" height="117"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="jbO-dq-v0O" firstAttribute="leading" secondItem="RCs-XT-x2Q" secondAttribute="leading" id="CsN-wj-EBa"/>
+                            <constraint firstAttribute="bottom" secondItem="iAV-44-PHk" secondAttribute="bottom" constant="8" id="D0p-FT-83z"/>
+                            <constraint firstAttribute="bottom" secondItem="jbO-dq-v0O" secondAttribute="bottom" id="N3g-U9-LcU"/>
+                            <constraint firstItem="iAV-44-PHk" firstAttribute="top" secondItem="RCs-XT-x2Q" secondAttribute="top" constant="8" id="g81-f3-aye"/>
+                            <constraint firstItem="iAV-44-PHk" firstAttribute="leading" secondItem="jbO-dq-v0O" secondAttribute="trailing" constant="16" id="hJ6-Xb-Saa"/>
+                            <constraint firstItem="jbO-dq-v0O" firstAttribute="top" secondItem="RCs-XT-x2Q" secondAttribute="top" id="lLr-mV-UN4"/>
+                            <constraint firstAttribute="trailing" secondItem="iAV-44-PHk" secondAttribute="trailing" constant="16" id="mUI-bp-hxm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.1145888072" green="0.1157233498" blue="0.1157233498" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="RCs-XT-x2Q" secondAttribute="bottom" constant="10" id="643-NA-UtK"/>
+                    <constraint firstItem="RCs-XT-x2Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Rri-Rc-NNQ"/>
+                    <constraint firstAttribute="trailing" secondItem="RCs-XT-x2Q" secondAttribute="trailing" constant="20" id="hkl-6n-BFe"/>
+                    <constraint firstItem="RCs-XT-x2Q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="n9z-Wc-ylK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="movieDescription" destination="VKX-zr-mJk" id="MtQ-i8-ADL"/>
+                <outlet property="movieImage" destination="jbO-dq-v0O" id="8lM-kB-Hkh"/>
+                <outlet property="movieName" destination="08k-Jy-bOq" id="c1U-x6-G9h"/>
+            </connections>
+            <point key="canvasLocation" x="207.24637681159422" y="135.9375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="questionmark.folder.fill" catalog="system" width="128" height="97"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
