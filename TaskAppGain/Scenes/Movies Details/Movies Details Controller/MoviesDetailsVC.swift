@@ -22,5 +22,6 @@ class MoviesDetailsVC: UIViewController{
         super.viewDidLoad()
         presenter = MoviesDelailsVCPresenter(view: self, movieId: movieDetailsId ?? 0)
         presenter.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
     }
 }
