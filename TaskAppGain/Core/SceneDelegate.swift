@@ -53,7 +53,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             print(url)
             let urlString = url.absoluteString
             let component = urlString.components(separatedBy: "/")
-            
             if component.count > 1, let product = component.last {
                 print(component, product)
                 navigateToMovieDetail(movieId: Int(product) ?? 0)
@@ -62,12 +61,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func navigateToMovieDetail(movieId: Int){
-        
-        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        guard let detailScreen = storyBoard.instantiateViewController(withIdentifier: "MoviesDetailsVC") as? MoviesDetailsVC else { return}
-        detailScreen.movieDetailsId = movieId
+        let detailPresenter = MoviesDelailsVCPresenter(movieId: movieId)
+        let detailsViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(identifier: "MoviesDetailsVC", creator: { coder -> MoviesDetailsVC? in
+            MoviesDetailsVC(coder: coder, presenter: detailPresenter)
+        })
         let navVC = self.window?.rootViewController as? UINavigationController
-        navVC?.pushViewController(detailScreen, animated: true)
+        navVC?.pushViewController(detailsViewController, animated: true)
     }
 
 }

@@ -8,16 +8,16 @@
 import UIKit
 
 class MoviesCell: UITableViewCell, MoviesCellView {
-
+    // MARK: - OUTLETS
     @IBOutlet private weak var movieImage: UIImageView!
     @IBOutlet private weak var movieName: UILabel!
     @IBOutlet private weak var movieDescription: UILabel!
-    
+    // MARK: - LIFECYLE
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
     }
-    
+    // MARK: - Function Update Cell
     func displayMoviesName(name: String) {
         movieName.text = name
     }

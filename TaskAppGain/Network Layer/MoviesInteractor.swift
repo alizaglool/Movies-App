@@ -16,7 +16,7 @@ class MoviesInteractor {
         func url() -> String {
             switch self {
             case .popular:
-                return "https://api.themoviedb.org/3/movie/popular?api_key=7e46a8a0da96a74a34ce736d275b6a82&language=en-US&page=1"
+                return "https://api.themoviedb.org/3/movie/popular?api_key=7e46a8a0da96a74a34ce736d275b6a82&language=en-US"
             case .movie(let id):
                 return "https://api.themoviedb.org/3/movie/\(id)?api_key=7e46a8a0da96a74a34ce736d275b6a82&language=en-US"
             }

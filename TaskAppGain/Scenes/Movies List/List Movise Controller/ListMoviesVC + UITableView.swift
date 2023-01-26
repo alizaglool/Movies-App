@@ -8,7 +8,7 @@
 import UIKit
 
 extension ListMoviesVC: UITableViewDelegate, UITableViewDataSource {
-    
+    // MARK: - Table View Stup Cells
     func setupTableView(){
         moviseTableView.delegate = self
         moviseTableView.dataSource = self
@@ -21,13 +21,14 @@ extension ListMoviesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MoviesCell", for: indexPath) as! MoviesCell
-        presenter.configure(cell: cell, for: indexPath.row)
+        presenter.configureCell(cell: cell, for: indexPath.row)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 230
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.didSelectRow(index: indexPath.row)
     }

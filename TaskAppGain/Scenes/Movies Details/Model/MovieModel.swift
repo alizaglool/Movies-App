@@ -7,8 +7,8 @@
 
 import Foundation
 
-// MARK: - ListMovieDetails
-struct ListMovieDetails: Codable {
+// MARK: - Movie Delails Model
+struct MovieModel: Codable {
     let id: Int?
     let originalTitle, overview: String?
     let posterPath: String?

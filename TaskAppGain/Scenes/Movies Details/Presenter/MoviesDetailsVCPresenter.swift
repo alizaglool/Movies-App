@@ -7,42 +7,47 @@
 
 import UIKit
 
-protocol MoviesDelailsView: AnyObject {
+//MARK: - Protocol Controller
+protocol MoviesDelailsViewControllerType: AnyObject {
     
     func showIndicator()
     func hideIndicator()
     func updateDataToUI(title: String, date: String, description: String, image: String)
     
 }
-
-class MoviesDelailsVCPresenter {
-
-    private weak var view: MoviesDelailsView?
+//MARK: - Protocol Presenter
+protocol MoviesDetailsType: AnyObject {
+    
+    var viewControllerType: MoviesDelailsViewControllerType? {get set}
+    func getDetailsMovieFromURL()
+    func updateMovieDetails(movie: MovieModel)
+}
+//MARK: - Presenter Movies Delails
+class MoviesDelailsVCPresenter: MoviesDetailsType {
+    
+    //MARK: VARIABLE
+    weak var viewControllerType: MoviesDelailsViewControllerType?
     private var interactor = MoviesInteractor()
-    private var movieDetails: ListMovieDetails?
+    private var movie: MovieModel?
     var movieId: Int
-    init(view: MoviesDelailsView, movieId: Int){
-        self.view = view
+    //MARK: INIT
+    init(movieId: Int){
         self.movieId = movieId
     }
-    
-    func viewDidLoad(){
-        getDetailsMovie()
-    }
-    
-    func getDetailsMovie(){
-        view?.showIndicator()
-        interactor.fetchDate(url: .movie(id: movieId ?? 0), complation: { [weak self ] (detailsMovie: ListMovieDetails?, error) in
+    //MARK: - Functions
+    func getDetailsMovieFromURL(){
+        viewControllerType?.showIndicator()
+        interactor.fetchDate(url: .movie(id: movieId ), complation: { [weak self ] (detailsMovie: MovieModel?, error) in
             guard let self = self else {return}
-            self.view?.hideIndicator()
+            self.viewControllerType?.hideIndicator()
             if let error = error {
                 print(error.localizedDescription)
             } else {
                 if let detailsMovie = detailsMovie {
-                    self.movieDetails = detailsMovie
-                    if let movieDetails = self.movieDetails {
+                    self.movie = detailsMovie
+                    if let movieDetails = self.movie {
                         DispatchQueue.main.async {
-                            self.movieDetailsUpdata(movie: movieDetails )
+                            self.updateMovieDetails(movie: movieDetails )
                         }
                     }
                 }
@@ -50,12 +55,12 @@ class MoviesDelailsVCPresenter {
         })
     }
     
-    func movieDetailsUpdata(movie: ListMovieDetails){
+    func updateMovieDetails(movie: MovieModel){
         let title = movie.title ?? ""
         let date = movie.releaseDate ?? ""
         let description = movie.overview ?? ""
         let image = movie.posterPath ?? ""
-        view?.updateDataToUI(title: title, date: date, description: description, image: image)
+        viewControllerType?.updateDataToUI(title: title, date: date, description: description, image: image)
     }
     
 }

@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
 extension ListMoviesVC: MoviesView {
-    
+    // MARK: - Functions Movies Protocol
     func showIndicator() {
         DispatchQueue.main.async {
             self.activityIndicator.isHidden = false
@@ -31,9 +32,10 @@ extension ListMoviesVC: MoviesView {
     }
     
     func navigateToMoviesDetailsScreen(movie: MovieListModel) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "MoviesDetailsVC") as? MoviesDetailsVC {
-            vc.movieDetailsId = movie.id ?? 0
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        let detailPresenter = MoviesDelailsVCPresenter(movieId: movie.id ?? 0)
+        let detailsViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(identifier: "MoviesDetailsVC", creator: { coder -> MoviesDetailsVC? in
+            MoviesDetailsVC(coder: coder, presenter: detailPresenter)
+        })
+        self.navigationController?.pushViewController(detailsViewController, animated: true)
     }
 }

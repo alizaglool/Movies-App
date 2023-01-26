@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension MoviesDetailsVC: MoviesDelailsView {
+extension MoviesDetailsVC: MoviesDelailsViewControllerType {
    
     func showIndicator() {
         DispatchQueue.main.async {
