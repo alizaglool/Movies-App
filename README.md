@@ -1,6 +1,6 @@
 
 # Movies App Task
-
+Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
 ![Home Screen](https://user-images.githubusercontent.com/50532840/215114609-0648941f-a1ed-414f-9cdc-a3dc68d7d243.png)  |  ![Details Screen](https://user-images.githubusercontent.com/50532840/215114979-8e9e5d92-cdd1-4de4-ab9a-efdd8a5d7149.png)
 ![ex deep link]([https://user-images.githubusercontent.com/50532840/215114609-0648941f-a1ed-414f-9cdc-a3dc68d7d243.png](https://user-images.githubusercontent.com/50532840/215123295-8fbc199f-9ed3-48f9-9be1-9e8dde015177.png))  |  ![openApp By deepLink]([https://user-images.githubusercontent.com/50532840/215114979-8e9e5d92-cdd1-4de4-ab9a-efdd8a5d7149.png](https://user-images.githubusercontent.com/50532840/215122949-f771ea4b-a249-43d4-8379-bc86a8388b66.png))
