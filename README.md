@@ -10,6 +10,7 @@ Movies List             |  Movie Details
 * The app can be Display 3 information (Image Movie, Name Movie, and Description Movie)
 * The app can be Movie Details when selelted any item for cell
 * The app can Open by Deep Link and Open Details specific Movie by Movie ID
+* The app can Receive Notifications from Firebase Cloud
 
 ## Base MVP Design Architectureb Project for Swift and Firebase
 
@@ -31,6 +32,4 @@ let listOfMovieID = [536554, 315162, 76600, 846433, 653851, 899112, 736526, 4362
 2. Now Congratulations!!! you can use this project 
 
 ## License
-This Helper software licensed under the Zaghloul.
-
-
+>This Helper software licensed under the Zaghloul.
