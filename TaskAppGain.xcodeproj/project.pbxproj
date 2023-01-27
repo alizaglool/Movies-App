@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		733C0F9729841046007EFE66 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733C0F9629841045007EFE66 /* Alert.swift */; };
 		73600A502980499500033BC7 /* MoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600A4F2980499500033BC7 /* MoviesInteractor.swift */; };
 		73600A5229804AC100033BC7 /* UIImage + URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600A5129804AC100033BC7 /* UIImage + URLSession.swift */; };
 		73600A552980549900033BC7 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600A542980549900033BC7 /* MovieList.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		733C0F9629841045007EFE66 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		73600A4F2980499500033BC7 /* MoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesInteractor.swift; sourceTree = "<group>"; };
 		73600A5129804AC100033BC7 /* UIImage + URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + URLSession.swift"; sourceTree = "<group>"; };
 		73600A542980549900033BC7 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				73B49F862980285800D36220 /* ShadowView.swift */,
 				73600A5129804AC100033BC7 /* UIImage + URLSession.swift */,
+				733C0F9629841045007EFE66 /* Alert.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				73E3652E29815FFA006788BD /* MovieModel.swift in Sources */,
 				73600A5C2980596600033BC7 /* ListMoviesVC+Presenter.swift in Sources */,
 				73B49F6D29801BFC00D36220 /* SceneDelegate.swift in Sources */,
+				733C0F9729841046007EFE66 /* Alert.swift in Sources */,
 				73E36530298161D9006788BD /* MoviesDetailsVCPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,7 +480,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 48564ABKVZ;
+				DEVELOPMENT_TEAM = UVXFA7228C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskAppGain/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Movies;
@@ -505,7 +509,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 48564ABKVZ;
+				DEVELOPMENT_TEAM = UVXFA7228C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaskAppGain/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Movies;

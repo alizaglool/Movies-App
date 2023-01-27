@@ -48,15 +48,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        
+#if DEBUG
+    print("Movies App Open By Deep Link")
+#else
+    print("I'm running in a non-DEBUG mode")
+#endif
+
         if let url = URLContexts.first?.url {
             print(url)
             let urlString = url.absoluteString
             let component = urlString.components(separatedBy: "/")
+            print(component)
             if component.count > 1, let product = component.last {
-                print(component, product)
+                print(product)
                 navigateToMovieDetail(movieId: Int(product) ?? 0)
-            } 
+            }
         }
     }
     
