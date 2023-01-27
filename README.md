@@ -1,11 +1,9 @@
 
 # Movies App Task
-Solarized dark             |  Solarized Ocean
+Movies List             |  Movie Details
 :-------------------------:|:-------------------------:
 ![Home Screen](https://user-images.githubusercontent.com/50532840/215114609-0648941f-a1ed-414f-9cdc-a3dc68d7d243.png)  |  ![Details Screen](https://user-images.githubusercontent.com/50532840/215114979-8e9e5d92-cdd1-4de4-ab9a-efdd8a5d7149.png)
 ![ex deep link](https://user-images.githubusercontent.com/50532840/215125060-d1507a64-500d-4e37-8906-c5745bf1af5b.png)  |  ![openApp By deepLink](https://user-images.githubusercontent.com/50532840/215125130-22ac4814-b8fb-4fb3-8b2f-acb1606dfe78.png)
-![ex deep link](https://user-images.githubusercontent.com/50532840/215125060-d1507a64-500d-4e37-8906-c5745bf1af5b.png)
-  |  ![openApp By deepLink](https://user-images.githubusercontent.com/50532840/215125130-22ac4814-b8fb-4fb3-8b2f-acb1606dfe78.png)
 
 ## Appliction Description
 * The app does some of these tasks like request api to Network Layer and response Data and show the Data
